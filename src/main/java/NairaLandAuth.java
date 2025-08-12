@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,7 @@ public class NairaLandAuth {
 
         registrationTest();
         loginTest();
-//        homepageTest();
+        homepageTest();
 
         driver.quit();
     }
@@ -39,16 +40,10 @@ public class NairaLandAuth {
         WebElement loginButton = driver.findElement(By.cssSelector("input[type='login']"));
         loginButton.click();
     }
-//
-//    public static void homepageTest() {
-//        // Verify welcome text
-//        WebElement welcomeText = driver.findElement(By.xpath("//td[@class='grad']//text()[contains(.,'Welcome')]"));
-//        Assert.assertTrue(welcomeText.getText().contains("Welcome Ekeminiii"));
-//
-//
-//        WebElement userLink = driver.findElement(By.cssSelector("https://www.nairaland.com/?m=3359708"));
-//        Assert.assertEquals(userLink.getText(), "Ekeminiii");
-//
-//
-//    }
+
+    private static void homepageTest() {
+        Assert.assertTrue(driver.getPageSource().contains("Welcome Ekeminiii"));
+
+    }
+
 }
