@@ -68,10 +68,10 @@ public class NairalandTest {
             fillFormField("username", newUsername);
             fillFormField("password", newPassword);
             clickSubmitButton();
-            System.out.println("✓ Sign In completed");
+            System.out.println(" Sign In completed");
             
         } catch (Exception e) {
-            System.out.println("⚠ Sign In issue: " + e.getMessage());
+            System.out.println(" Sign In issue: " + e.getMessage());
         }
     }
 
@@ -86,13 +86,13 @@ public class NairalandTest {
             
             // Basic validation
             if (title != null && !title.isEmpty()) {
-                System.out.println("✓ Homepage loaded successfully");
+                System.out.println(" Homepage loaded successfully");
             } else {
-                System.out.println("⚠ Homepage title is empty");
+                System.out.println(" Homepage title is empty");
             }
             
         } catch (Exception e) {
-            System.out.println("⚠ Homepage issue: " + e.getMessage());
+            System.out.println("Homepage issue: " + e.getMessage());
         }
     }
 
