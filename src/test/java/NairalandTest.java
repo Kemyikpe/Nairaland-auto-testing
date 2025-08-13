@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
@@ -23,19 +22,10 @@ public class NairalandTest {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         
-        // Configure Chrome options to reduce warnings
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--log-level=3"); // Only show fatal errors
-        options.addArguments("--silent");
-        
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         
-        // Generate unique test user
         Random random = new Random();
         int randomNum = random.nextInt(10000);
         newUsername = "testuser" + randomNum;
