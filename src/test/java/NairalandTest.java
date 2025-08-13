@@ -52,10 +52,10 @@ public class NairalandTest {
             
 
             clickSubmitButton();
-            System.out.println("✓ Registration completed");
+            System.out.println("Registration completed");
             
         } catch (Exception e) {
-            System.out.println("⚠ Registration issue: " + e.getMessage());
+            System.out.println("Registration issue: " + e.getMessage());
         }
     }
 
