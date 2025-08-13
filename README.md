@@ -1,57 +1,39 @@
-# First Assessment Project
+# Nairaland Automated Testing Project
 
-A Java Selenium test automation project for verifying key user flows on **Nairaland**, such as user registration, login, and homepage accessibility.  
-This project is built with **Maven** for test execution.
+Selenium WebDriver tests for **Nairaland** website validation.
 
-##  Project Structure
-FirstAssementProject/
-├── src/
-│ ├── main/
-│ │ └── java/org/example/
-│ │ ├── Main.java
-│ │ └── NairaLandAuth.java
-│ ├── resources/
-│ └── test/
-├── target/ # Build output
-├── pom.xml # Maven project configuration
-├── .gitignore
-└── README.md
+##  Exercise Requirements
 
-## 🛠 Prerequisites
+### 1. Defect Reporting
+- **File**: `DEFECT_REPORT.md` - Complete chatbot bug scenario with proper documentation
 
-Before running this project, ensure you have the following installed:
+### 2. Selenium Automation
+- **New User Creation**:  Dynamic user generation for each test run
+- **Registration Test**: Tests user registration with new account
+- **Sign In Test**: Tests login with newly created account
+- **Homepage Test**: Validates homepage functionality
 
-1. **Java Development Kit (JDK)**
-    - Version: Java 8 or later (`java -version` to check).
-    - Download from: [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/)
-    - **Installation (macOS / Linux):**
-        1. Download the `.dmg` (macOS) or `.tar.gz` (Linux) file for your OS from Oracle.
-        2. Install following the prompts (macOS) or extract and configure JAVA_HOME (Linux).
-        3. Verify installation in your terminal:
-           ```bash
-           java -version
-           ```
-           Expected output: A valid Java version number (e.g., `java version "17.0.10"`).
+## Quick Start
 
-2. **IntelliJ IDEA**
-    - Download from: [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/)
-    - Recommended: **Community Edition** (free) is enough for this project.
-    - During setup, install or enable these plugins:
-        - **Maven** (for dependency management — usually built-in)
-        - **JUnit** (for running Java tests)
-        - **Selenium Support** (optional but useful for syntax highlighting & code templates)
-        - **Git Integration** (for version control)
+### Prerequisites
+- IntelliJ IDEA Community Edition (free version)
+- Java 11+
+- Chrome browser
+- ChromeDriver (installed via Homebrew: `brew install chromedriver`)
 
-3. **Maven**
-    - Version: Maven 3.6+ (`mvn -v` to check).
-    - Download: [https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
+### Run Tests
+```bash
+# Run all tests
+mvn test
 
-4. **Google Chrome**
-    - Latest version from: [https://www.google.com/chrome/](https://www.google.com/chrome/)
+# Run specific test
+mvn test -Dtest=NairalandTest
+```
 
-5. **ChromeDriver**
-    - Version must match your installed Chrome version.
-    - Download: [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
+### In IntelliJ
+- Right-click `NairalandTest.java` → "Run 'NairalandTest'"
 
-6. **Internet connection**
-    - Required to run against the live Nairaland site and fetch Maven dependencies.
+## Files
+- `NairalandTest.java` - Streamlined test focusing on core requirements
+- `DEFECT_REPORT.md` - Bug scenario documentation
+- `pom.xml` - Maven configuration
